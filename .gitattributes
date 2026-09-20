@@ -1,0 +1,63 @@
+# ============================================================
+# Ghanyx — Git attributes
+# Ensures consistent behavior across Windows / macOS / Linux
+# ============================================================
+
+# ---------- Line endings ----------
+# Normalize all text files to LF in the repository.
+# On Windows, checkout as CRLF for compatibility with editors.
+* text=auto eol=lf
+
+# Explicitly mark text files
+*.py        text diff=python
+*.pyi       text diff=python
+*.md        text diff=markdown
+*.rst       text diff=rst
+*.txt       text
+*.toml      text
+*.yaml      text
+*.yml       text
+*.json      text
+*.ini       text
+*.cfg       text
+*.html      text diff=html
+*.css       text
+*.js        text
+*.ts        text
+*.sh        text eol=lf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+
+# ---------- Binary files ----------
+# Never modify these — treat as binary.
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.bmp       binary
+*.webp      binary
+*.pdf       binary
+*.zip       binary
+*.tar       binary
+*.gz        binary
+*.7z        binary
+*.exe       binary
+*.dll       binary
+*.so        binary
+*.dylib     binary
+*.whl       binary
+*.db        binary
+*.sqlite    binary
+*.sqlite3   binary
+
+# ---------- Git-specific ----------
+# Linguist: don't count these in language stats.
+*.lock      linguist-generated=true
+*.min.js    linguist-generated=true
+*.min.css   linguist-generated=true
+
+# ---------- Diff drivers ----------
+*.py        diff=python
+*.md        diff=markdown
