@@ -2,14 +2,11 @@
 Version information for Ghanyx.
 
 This module is the single source of truth for the framework's version.
-It is imported by both `pyproject.toml` (via setuptools-scm, optional)
-and the package itself.
-
-Keep this in sync with the version declared in `pyproject.toml`.
+Keep it in sync with the version declared in `pyproject.toml`.
 """
 
-__version__ = "0.1.0"
-__version_info__ = (0, 1, 0)
+__version__ = "0.2.0"
+__version_info__ = (0, 2, 0)
 
 __author__ = "Abdelghany Elghawaty"
 __author_email__ = "abdelghany.elghawaty@gmail.com"
