@@ -6,6 +6,7 @@ Public API:
     from ghanyx.logging import setup_logging, get_logger
     from ghanyx.config import get_config
     from ghanyx.database import get_db
+    from ghanyx.auth import AuthManager, User
     from ghanyx.errors import GhanyxError
 
 For full documentation, see: https://github.com/AbdelghanyElghawaty/ghanyx
@@ -13,14 +14,15 @@ For full documentation, see: https://github.com/AbdelghanyElghawaty/ghanyx
 
 from ghanyx.version import __version__, __author__, __license__
 
-# Re-export the most commonly used pieces at the top level,
-# so users can do `from ghanyx import get_config` if they prefer.
+# ----- Config -----
 from ghanyx.config import (
     GhanyxConfig,
     get_config,
     load_config,
     reload_config,
 )
+
+# ----- Database -----
 from ghanyx.database import (
     Database,
     SQLiteDatabase,
@@ -28,6 +30,16 @@ from ghanyx.database import (
     set_db,
     reset_db,
 )
+
+# ----- Auth (highlights only) -----
+from ghanyx.auth import (
+    User,
+    AuthManager,
+    Permission,
+    PermissionSet,
+)
+
+# ----- Errors -----
 from ghanyx.errors import GhanyxError
 
 __all__ = [
@@ -48,6 +60,12 @@ __all__ = [
     "get_db",
     "set_db",
     "reset_db",
+
+    # Auth
+    "User",
+    "AuthManager",
+    "Permission",
+    "PermissionSet",
 
     # Errors
     "GhanyxError",
